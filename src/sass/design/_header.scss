@@ -1,0 +1,11 @@
+/**
+ * The header partial.
+ */
+
+header {
+  @extend %clearfix;
+  @extend %max-width;
+  position: relative;
+
+
+}

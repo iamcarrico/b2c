@@ -1,6 +1,6 @@
 {
-  "name": "11ty-netlify-jumpstart",
-  "version": "0.4.0",
+  "name": "betweentwocodes",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-netlify-jumpstart.git"
+    "url": "git+https://github.com/iamcarrico/b2c.git"
   },
   "keywords": [],
-  "author": "5t3ph",
-  "license": "ISC",
+  "author": "iamcarrico",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/5t3ph/11ty-netlify-jumpstart/issues"
+    "url": "https://github.com/iamcarrico/b2c/issues"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",

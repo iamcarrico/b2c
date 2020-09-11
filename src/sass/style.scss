@@ -1,27 +1,31 @@
-@font-face {
-  font-family: "Baloo 2";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baloo 2 Regular"), local("Baloo-2-Regular"),
-    url("../fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
-  font-display: swap;
-}
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing
+// except for imports of your base, global, and design partials.
+////////////////////////
 
-@font-face {
-  font-family: "Baloo 2";
-  font-style: normal;
-  font-weight: 500;
-  src: local("Baloo 2 Medium"), local("Baloo-2-Medium"),
-    url("../fonts/baloo-2-v1-latin-500.woff2") format("woff2");
-  font-display: swap;
-}
+////////////////////////
+// Base Import
+////////////////////////
+@import 'config/config';
 
-@import "theme";
-@import "reset";
-@import "layout";
-@import "sitenav";
-@import "typography";
-@import "buttons";
-@import "card";
-@import "prism";
-@import "utilities";
+////////////////////////
+// Import Global Stylings
+////////////////////////
+@import 'global/normalize';
+@import 'global/extendables';
+@import 'global/type';
+@import 'global/fonts';
+
+////////////////////////
+// Import Design Stylings
+////////////////////////
+@import 'design/header';
+@import 'design/main';
+@import 'design/footer';
+
+////////////////////////
+// Import print
+////////////////////////
+@import 'print';
