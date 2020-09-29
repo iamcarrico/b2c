@@ -2,10 +2,21 @@
  * The header partial.
  */
 
-header {
+.header {
   @extend %clearfix;
   @extend %max-width;
   position: relative;
 
+  text-align: center;
 
+  &--sitenav__navlist,
+  &--sitenav__navlist-item {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  &--sitenav__navlist-item {
+    display: inline-block;
+
+  }
 }
