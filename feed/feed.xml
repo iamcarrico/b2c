@@ -5,7 +5,7 @@
 	
 	<link href="http://localhost:8080/feed/" rel="self"/>
 	<link href="http://localhost:8080"/>
-	<updated>2020-09-29T23:26:01+00:00</updated>
+	<updated>2020-09-29T23:32:27+00:00</updated>
 	<id>http://localhost:8080</id>
 	<author>
 		<name>Ian Carrico</name>
@@ -14,7 +14,7 @@
 	<entry>
 		<title>About</title>
 		<link href="http://localhost:8080/about/"/>
-		<updated>2020-09-29T23:26:01+00:00</updated>
+		<updated>2020-09-29T23:32:27+00:00</updated>
 		<id>http://localhost:8080/about/</id>
 		<content type="html">&lt;p&gt;A new podcast concept—bridging the intersection of Law and Technology.&lt;/p&gt;
 </content>
