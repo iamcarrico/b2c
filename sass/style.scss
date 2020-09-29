@@ -1,0 +1,31 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing
+// except for imports of your base, global, and design partials.
+////////////////////////
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'config/config';
+
+////////////////////////
+// Import Global Stylings
+////////////////////////
+@import 'global/normalize';
+@import 'global/extendables';
+@import 'global/type';
+@import 'global/fonts';
+
+////////////////////////
+// Import Design Stylings
+////////////////////////
+@import 'design/header';
+@import 'design/main';
+@import 'design/footer';
+
+////////////////////////
+// Import print
+////////////////////////
+@import 'print';

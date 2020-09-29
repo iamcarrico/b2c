@@ -1,0 +1,16 @@
+/**
+ * The main partial.
+ */
+
+main {
+  @extend %clearfix;
+  max-width: 45em;
+  margin: 0 auto;
+
+  padding: .5em;
+  text-align: center;
+}
+
+.logo {
+  max-width: 400px;
+}

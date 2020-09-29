@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Between Two Codes</title>
+	<subtitle>A podcast about the intersection of law and technology.</subtitle>
+	
+	<link href="http://localhost:8080/feed/" rel="self"/>
+	<link href="http://localhost:8080"/>
+	<updated>2020-09-29T23:26:01+00:00</updated>
+	<id>http://localhost:8080</id>
+	<author>
+		<name>Ian Carrico</name>
+	</author>
+	
+	<entry>
+		<title>About</title>
+		<link href="http://localhost:8080/about/"/>
+		<updated>2020-09-29T23:26:01+00:00</updated>
+		<id>http://localhost:8080/about/</id>
+		<content type="html">&lt;p&gt;A new podcast concept—bridging the intersection of Law and Technology.&lt;/p&gt;
+</content>
+	</entry>
+</feed>
