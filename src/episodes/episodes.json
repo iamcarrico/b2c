@@ -1,0 +1,5 @@
+{
+  "tags": "episode",
+  "layout": "episode",
+  "permalink": "/episode/{{ page.fileSlug }}/"
+}

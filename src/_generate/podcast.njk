@@ -1,0 +1,68 @@
+---
+permalink: feed/podcast.xml
+eleventyExcludeFromCollections: true
+---
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+      <title>{{ meta.podcast.name }}</title>
+	    <subtitle>{{ meta.podcast.subtitle }}</subtitle>
+      {% set absoluteUrl %}{{ '/' | url | absoluteUrl(meta.url) }}{% endset %}
+      <link>{{ absoluteUrl }}</link>
+      <image>
+          <url>{{ meta.podcast.image | url | absoluteUrl(meta.url) }}</url>
+          <title>{{ meta.podcast.name }}</title>
+          <link>{{ absoluteUrl }}</link>
+      </image>
+        <description>
+            {{ meta.podcast.description }}
+        </description>
+        <language>en-us</language>
+        <copyright>{{ meta.podcast.authorName }} {{ page.date.getFullYear() }}</copyright>
+        <atom:link href="{{ page.url | url | absoluteUrl(meta.url) }}" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>{{ page.date.toUTCString() }}</lastBuildDate>
+        <itunes:author>{{ meta.podcast.authorName }}</itunes:author>
+        <itunes:summary>
+            {{ meta.podcast.description }}
+        </itunes:summary>
+        <itunes:subtitle>{{ meta.podcast.subtitle }}</itunes:subtitle>
+        <itunes:owner>
+            <itunes:name>{{ meta.podcast.authorName }}</itunes:name>
+            <itunes:email>{{ meta.podcast.email }}</itunes:email>
+        </itunes:owner>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:keywords>
+            law,policy,technology,privacy
+        </itunes:keywords>
+        <itunes:image href="{{ meta.podcast.image | url | absoluteUrl(meta.url) }}"/>
+        <rawvoice:rating>TV-G</rawvoice:rating>
+        <rawvoice:location>Washington, DC</rawvoice:location>
+        <rawvoice:frequency>Monthly</rawvoice:frequency>
+        <itunes:category text="Technology"/>
+        <pubDate>{{ page.date.toUTCString() }}</pubDate>
+
+        {% for episode in collections.episodes %}
+          {% set absoluteEpisodeUrl %}{{ episode.url | url | absoluteUrl(meta.url) }}{% endset %}
+          <item>
+            <title>{{ episode.data.title }}</title>
+            <link>{{ episode.data.audio }}</link>
+            <pubDate>{{ episode.data.date.toUTCString() }}</pubDate>
+            <description>
+                {{ episode.data.description }}
+            </description>
+            <enclosure url="{{ episode.data.audio }}" length="{{ episode.data.file_size }}" type="audio/mpeg"/>
+            <guid>
+                {{ episode.data.audio }}
+            </guid>
+            <itunes:duration>{{ episode.data.episode_length }}</itunes:duration>
+            <itunes:summary>
+                {{ episode.data.description }}
+            </itunes:summary>
+            <itunes:image href="{{ episode.data.itunes_images| url | absoluteUrl(meta.url) }}"/>
+            <itunes:keywords>
+                {{ episode.data.categories.join(',') }}
+            </itunes:keywords>
+            <itunes:explicit>no</itunes:explicit>
+          </item>
+        {%- endfor -%}
+    </channel>
+  </rss>
